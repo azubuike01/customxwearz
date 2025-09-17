@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomX Wears</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --purple:#7b2ff7;
+            --red:#ff416c;
+            --grad: linear-gradient(135deg,var(--purple),var(--red));
+            --button-grad: linear-gradient(90deg,var(--purple),var(--red));
+            --muted:#666;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            scroll-behavior: smooth;
+            background: #fff;
+        }
+        a { text-decoration: none; }
+        button { cursor: pointer; }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 90vh;
+            background: var(--grad);
+            color: #fff;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .hero p { font-size: 1.2em; margin-bottom: 30px; color: rgba(255,255,255,0.95); }
+        .hero .cta-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background: var(--button-grad);
+            color: white;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: transform 0.18s, opacity 0.18s;
+            box-shadow: 0 8px 20px rgba(123,47,247,0.18);
+        }
+        .hero .cta-buttons a:hover { transform: translateY(-3px); opacity: 0.98; }
+
+        section { padding: 60px 20px; }
+        .section-title {
+            text-align: center;
+            margin-bottom: 24px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: #222;
+        }
+        .tagline { text-align:center; color: var(--muted); margin-bottom: 32px; }
+
+        .about { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; background: #fff; }
+        .about img { max-width: 480px; width: 100%; border-radius: 10px; }
+        .about-text { max-width: 600px; }
+
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0px 6px 18px rgba(0,0,0,0.06);
+            transition: transform 0.18s;
+        }
+        .product-card:hover{ transform: translateY(-6px); }
+        .product-card img { max-width: 100%; border-radius: 8px; margin-bottom: 12px; }
+        .product-card h3 { margin-bottom: 8px; }
+        .product-card p { margin-bottom: 12px; color: var(--muted); }
+        .product-card a {
+            display: inline-block;
+            padding: 10px 18px;
+            background: var(--button-grad);
+            color: white;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+        .product-card a:hover { opacity: 0.95; }
+
+        .instagram-section { text-align: center; background: #fff; }
+        .instagram-embed { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+        .insta-card { max-width:720px; width:100%; border-radius:12px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+        .insta-card iframe { width:100%; height:640px; border:0; }
+
+        .featured-posts { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px; }
+        .post-card { max-width:350px; width:100%; border-radius:12px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+        .post-card iframe { width:100%; height:480px; border:0; }
+
+        .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; justify-content: center; background:#fff; }
+        .testimonial-card { background: #fff; padding: 18px; border-radius: 10px; box-shadow: 0px 6px 18px rgba(0,0,0,0.06); min-height:120px; }
+        .testimonial-card p { font-style: italic; color:#333; }
+        .testimonial-author { margin-top:10px; font-weight:700; color:var(--muted); }
+
+        footer { color: white; text-align: center; padding: 36px 20px; background: var(--grad); }
+        footer a { color: #fff; margin: 0 8px; font-weight:700; }
+
+        @media(max-width:768px){
+            .about { flex-direction: column; }
+            .hero h1 { font-size:2.2em; }
+            .insta-card iframe{ height:520px; }
+            .post-card iframe{ height:400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Wear Your Identity with CustomX</h1>
+        <p>Custom-made T-shirts & apparel that tell your story</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/2348069690208?text=Hello%20CustomX%2C%20I%20want%20to%20place%20an%20order." target="_blank">Shop Now</a>
+            <a href="https://www.instagram.com/customx_wears/" target="_blank">Follow on Instagram</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <img src="your-lifestyle-image.jpg" alt="CustomX Apparel">
+        <div class="about-text">
+            <h2 class="section-title">About CustomX</h2>
+            <p>CustomX creates premium, limited-edition apparel that’s personalized to you. Quality fabrics, meaningful designs, and exclusive drops — style that speaks.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">CustomX Products</h2>
+        <p class="tagline">Discover our exclusive, premium designs</p>
+        <div class="products">
+            <div class="product-card">
+                <img src="https://drive.google.com/uc?export=view&id=FILE_ID_TSHIRT" alt="Custom T-shirt">
+                <h3>Custom T-Shirt</h3>
+                <p>High-quality cotton T-shirt with unique designs.</p>
+                <a href="https://wa.me/2348069690208?text=Hello%20CustomX%2C%20I%20want%20to%20order%20a%20T-shirt." target="_blank">Order This Design</a>
+            </div>
+            <div class="product-card">
+                <img src="https://drive.google.com/uc?export=view&id=FILE_ID_HOODIE" alt="Custom Hoodie">
+                <h3>Custom Hoodie</h3>
+                <p>Warm, stylish hoodie perfect for any occasion.</p>
+                <a href="https://wa.me/2348069690208?text=Hello%20CustomX%2C%20I%20want%20to%20order%20a%20Hoodie." target="_blank">Order This Design</a>
+            </div>
+            <div class="product-card">
+                <img src="https://drive.google.com/uc?export=view&id=FILE_ID_TOTEBAG" alt="Custom Tote Bag">
+                <h3>Custom Tote Bag</h3>
+                <p>Stylish tote bag with personalized prints.</p>
+                <a href="https://wa.me/2348069690208?text=Hello%20CustomX%2C%20I%20want%20to%20order%20a%20Tote%20Bag." target="_blank">Order This Design</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="instagram-section">
+        <h2 class="section-title">Featured Reel</h2>
+        <div class="instagram-embed">
+            <div class="insta-card">
+                <iframe src="https://www.instagram.com/reel/DNVw2V7t7J8/embed" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+        <p class="tagline">Watch more on <a href="https://www.instagram.com/reel/DNVw2V7t7J8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">this Reel link</a> or follow <a href="https://www.instagram.com/customx_wears/" target="_blank">@customx_wears</a></p>
+
+        <h2 class="section-title">Featured Posts</h2>
+        <div class="featured-posts">
+            <div class="post-card">
+                <iframe src="https://www.instagram.com/p/CUSTOM_POST_ID1/embed" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="post-card">
+                <iframe src="https://www.instagram.com/p/CUSTOM_POST_ID2/embed" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="post-card">
+                <iframe src="https://www.instagram.com/p/CUSTOM_POST_ID3/embed" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials">
+            <div class="testimonial-card"><p>"The shirt I ordered was exactly what I imagined — Divine Azubuike is amazing!"</p><div class="testimonial-author">— Divine Azubuike</div></div>
+            <div class="testimonial-card"><p>"CustomX made my event special with their unique designs. Highly recommend!"</p><div class="testimonial-author">— Aisha M.</div></div>
+            <div class="testimonial-card"><p>"Love the quality and attention to detail. Definitely ordering again!"</p><div class="testimonial-author">— Kelechi O.</div></div>
+            <div class="testimonial-card"><p>"Best custom apparel experience ever!"</p><div class="testimonial-author">— Cinedo Lingua</div></div>
+            <div class="testimonial-card"><p>"My hoodie is perfect. Friends keep asking where I got it!"</p><div class="testimonial-author">— Tunde R.</div></div>
+            <div class="testimonial-card"><p>"Amazing service and fast delivery. Truly satisfied!"</p><div class="testimonial-author">— Lola S.</div></div>
+            <div class="testimonial-card"><p>"Every design feels unique and special. Keep it up!"</p><div class="testimonial-author">— Emeka N.</div></div>
+            <div class="testimonial-card"><p>"I gifted a tote bag and it was a hit. Thank you CustomX!"</p><div class="testimonial-author">— Sandra K.</div></div>
+            <div class="testimonial-card"><p>"Excellent print quality and colors are vibrant."</p><div class="testimonial-author">— Michael B.</div></div>
+            <div class="testimonial-card"><p>"Great communication and attention to my custom request."</p><div class="testimonial-author">— Riya P.</div></div>
+            <div class="testimonial-card"><p>"Quick turnaround and the packaging was neat."</p><div class="testimonial-author">— Chidi A.</div></div>
+            <div class="testimonial-card"><p>"The sizing guide was accurate — fits perfectly."</p><div class="testimonial-author">— Funke O.</div></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact Us:</p>
+        <a href="https://wa.me/2348069690208?text=Hello%20CustomX%2C%20I%20want%20to%20place%20an%20order." target="_blank">Order Now</a> |
+        <a href="https://wa.me/2347042142191?text=Hello%20CustomX%20Customer%20Care%2C%20I%20need%20help." target="_blank">Customer Care</a> |
+        <a href="https://www.instagram.com/customx_wears/" target="_blank">Instagram</a>
+        <p>&copy; 2025 CustomX Wears</p>
+    </footer>
+
+</body>
+</html>
